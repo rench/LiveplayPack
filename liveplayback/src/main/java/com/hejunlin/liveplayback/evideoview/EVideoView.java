@@ -50,7 +50,7 @@ public class EVideoView extends FrameLayout {
     private Context             mContext;
     private boolean isInitMediaPlay = true;
     private Handler mHandler        = new Handler(Looper.getMainLooper());
-    private com.sun.jndi.toolkit.url.Uri     mURI;
+    private Uri     mURI;
     private boolean isURi;
 
     public EVideoView(@NonNull Context context) {
