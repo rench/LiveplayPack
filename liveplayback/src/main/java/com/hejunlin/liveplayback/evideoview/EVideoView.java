@@ -50,7 +50,7 @@ public class EVideoView extends FrameLayout {
     private Context             mContext;
     private boolean isInitMediaPlay = true;
     private Handler mHandler        = new Handler(Looper.getMainLooper());
-    private Uri     mURI;
+    private com.sun.jndi.toolkit.url.Uri     mURI;
     private boolean isURi;
 
     public EVideoView(@NonNull Context context) {
@@ -209,6 +209,9 @@ public class EVideoView extends FrameLayout {
                     if(mURI.toString().contains("cbg.cn")){
                         headers.put("referer", "http://www.cbg.cn/zbpd/");
                         headers.put("Referer", "http://www.cbg.cn/zbpd/");
+                    } else if(mURI.toString().contains("cditv.cn")){
+                        headers.put("referer", "http://www.cditv.cn/");
+                        headers.put("Referer", "http://www.cditv.cn/");
                     }
                     mMediaPlayer.setDataSource(mContext, mURI, headers);
                 } else {
