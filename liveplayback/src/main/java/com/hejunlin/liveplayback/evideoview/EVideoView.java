@@ -204,7 +204,12 @@ public class EVideoView extends FrameLayout {
         try {
             if (dataSource == null) {
                 if (isURi) {
-                    mMediaPlayer.setDataSource(mContext, mURI, new HashMap<String, String>());
+                    Map<String, String> headers = new HashMap<>();
+                    if(mURI.toString().contains("cbg.cn")){
+                        headers.put("referer", "http://www.cbg.cn/zbpd/");
+                        headers.put("Referer", "http://www.cbg.cn/zbpd/");
+                    }
+                    mMediaPlayer.setDataSource(mContext, mURI, headers);
                 } else {
                     mMediaPlayer.setDataSource(mPath);
                 }
