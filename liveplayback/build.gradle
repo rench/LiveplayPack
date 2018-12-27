@@ -10,6 +10,7 @@ android {
         versionName "2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    //keytool -genkey -alias android.keystore -keyalg RSA -validity 20000 -keystore android.keystore
     signingConfigs {
         config {
             keyAlias "android.keystore"
