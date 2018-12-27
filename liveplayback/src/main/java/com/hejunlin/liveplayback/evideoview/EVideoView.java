@@ -206,7 +206,7 @@ public class EVideoView extends FrameLayout {
             if (dataSource == null) {
                 if (isURi) {
                     Map<String, String> headers = new HashMap<>();
-                    if(mURI.toString().contains("cbg.cn")){
+                    if(mURI.toString().contains("cbg.cn") || mURI.toString().contains("cqtv")){
                         headers.put("referer", "http://www.cbg.cn/zbpd/");
                         headers.put("Referer", "http://www.cbg.cn/zbpd/");
                     } else if(mURI.toString().contains("cditv.cn")){
@@ -279,8 +279,8 @@ public class EVideoView extends FrameLayout {
                 method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "rtsp_flags", "prefer_tcp");
                 method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "allowed_media_types", "video");
 
-                method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "user-agent", "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3610.2 Safari/537.36");
-                method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "user_agent", "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3610.2 Safari/537.36");
+                method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "user-agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3610.2 Safari/537.36");
+                //method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "user_agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3610.2 Safari/537.36");
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
             } catch (InvocationTargetException e) {
