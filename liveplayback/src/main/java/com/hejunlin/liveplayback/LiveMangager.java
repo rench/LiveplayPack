@@ -9,6 +9,8 @@ public class LiveMangager {
 
     static {
         list = new ArrayList<>();
+        list.add(new DataBean("CQTV新闻cbg", "http://132.232.188.78:8881/ocqtv3.m3u8"));
+
         list.add(new DataBean("CCTV1标清", "rtmp://58.200.131.2:1935/livetv/cctv1"));
         list.add(new DataBean("CCTV2标清", "rtmp://58.200.131.2:1935/livetv/cctv2"));
         list.add(new DataBean("CCTV3标清", "rtmp://58.200.131.2:1935/livetv/cctv3"));
