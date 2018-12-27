@@ -12,13 +12,13 @@ android {
     }
     signingConfigs {
         config {
-            keyAlias "lowang"
+            keyAlias "android.keystore"
             keyPassword "123456"
             storeFile file('android.keystore')
             storePassword "123456"
         }
     }
-    
+
     buildTypes {
         release {
             signingConfig signingConfigs.config
