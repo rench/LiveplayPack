@@ -289,6 +289,7 @@ public class EVideoView extends FrameLayout {
                 method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "allowed_media_types", "video");
 
                 method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "user-agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3610.2 Safari/537.36");
+                method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "headers", "referer: http://www.cbg.cn/zbpd/");
                 //method1.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "user_agent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3610.2 Safari/537.36");
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
