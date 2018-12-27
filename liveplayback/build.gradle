@@ -10,8 +10,18 @@ android {
         versionName "2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        config {
+            keyAlias "lowang"
+            keyPassword "123456"
+            storeFile file('android.keystore')
+            storePassword "123456"
+        }
+    }
+    
     buildTypes {
         release {
+            signingConfig signingConfigs.config
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -21,6 +31,9 @@ android {
             dirs 'libs'
         }
     }
+
+    
+
 
 }
 
