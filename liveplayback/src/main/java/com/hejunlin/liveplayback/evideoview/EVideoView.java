@@ -248,7 +248,7 @@ public class EVideoView extends FrameLayout {
                 Method method = Class.forName("tv.danmaku.ijk.media.player.IjkMediaPlayer")
                         .getDeclaredMethod("setOption", int.class, String.class, long.class);
                 // 硬编码
-                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 0); //0表示使用av解码器，1表示使用媒体解码器。
+                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 1); //0表示使用av解码器，1表示使用媒体解码器。
                 method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 1);
                 method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-handle-resolution-change", 1);
 
