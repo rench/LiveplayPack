@@ -248,7 +248,7 @@ public class EVideoView extends FrameLayout {
                 Method method = Class.forName("tv.danmaku.ijk.media.player.IjkMediaPlayer")
                         .getDeclaredMethod("setOption", int.class, String.class, long.class);
                 // 硬编码
-                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 1);
+                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec", 0); //0表示使用av解码器，1表示使用媒体解码器。
                 method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-auto-rotate", 1);
                 method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "mediacodec-handle-resolution-change", 1);
 
@@ -267,6 +267,8 @@ public class EVideoView extends FrameLayout {
                 method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "analyzemaxduration", 100L);
 //                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "probesize", 10240L);
                 method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "flush_packets", 1L);
+                                
+                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_FORMAT, "reconnect", 1);
 //  关闭播放器缓冲，这个必须关闭，否则会出现播放一段时间后，一直卡主，控制台打印 FFP_MSG_BUFFERING_START
 //                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "packet-buffering", 0L);
 //                method.invoke(mMediaPlayer, IjkMediaPlayer.OPT_CATEGORY_PLAYER, "framedrop", 1L);
